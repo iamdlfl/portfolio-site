@@ -1,0 +1,8 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $mainText;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
