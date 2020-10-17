@@ -1,2 +1,9 @@
+/* Colors */
 $mainBlue: #2f5572;
 $mainText: #181016;
+
+/* Sizes */
+$small: 560px;
+$medium: 780px;
+$large: 1020px;
+$huge: 1400;

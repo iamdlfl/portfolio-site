@@ -1,6 +1,7 @@
-body {
+body, html {
     font-family: 'Roboto', sans-serif;
     color: $mainText;
+    box-sizing: border-box;
 }
 img {
     max-width: 100%;

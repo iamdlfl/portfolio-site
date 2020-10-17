@@ -1,14 +1,31 @@
 .hero {
   position: relative;
-
+  margin-bottom: 10px;
+  
   &__content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
     text-align: center;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: $medium) {
+
+    &__content {
+      position: relative;
+      top: 0;
+      transform: translateY(0);
+    }
+
+    &__background {
+      display: none;
+    }
   }
 
 }
