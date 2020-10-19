@@ -1,0 +1,50 @@
+.list {
+
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__item {
+        margin: 5px 0;
+        padding: 5px 0;
+        border-bottom: 1px grey solid;
+        vertical-align: middle;
+
+        &--header {
+
+            font-weight: 700;
+            border-right: 1px grey solid;
+        }
+
+        
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        @media (min-width: $small) {
+            &--med-min-height {
+                min-height: 80px;
+            }
+
+            &--header {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (min-width: $medium) {
+            margin: 10px 0;
+            padding: 10px 0;
+
+            &--med-min-height {
+                min-height: 0;
+            }
+        }
+    
+    }
+    
+    
+
+
+}
+

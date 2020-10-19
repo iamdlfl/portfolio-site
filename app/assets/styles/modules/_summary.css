@@ -1,0 +1,13 @@
+.summary {
+    margin-bottom: 20px;
+    margin-right: 40px;
+    
+    @media (min-width: $small) {
+        margin-bottom: 50px;
+        font-size: 1.2rem;
+        
+        &__header {
+            font-size: 2.5rem;
+        }
+    }
+}

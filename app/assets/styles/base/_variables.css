@@ -1,9 +1,15 @@
 /* Colors */
-$mainBlue: #2f5572;
+$greyPurple: #605499;
 $mainText: #181016;
+$linkText: #2676ff;
+$lightGrey: #a4a4b3;
+$deepPurple: #2A0ACC;
+$tan: #FFBE66;
+$orange: #CC5D0A;
 
 /* Sizes */
-$small: 560px;
+$small: 580px;
 $medium: 780px;
-$large: 1020px;
+$med-large: 900px;
+$large: 1150px;
 $huge: 1400;

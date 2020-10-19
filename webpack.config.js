@@ -4,6 +4,7 @@ const postCSSPlugins = [
     require('postcss-import'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
+    require('postcss-hexrgba'),
     require('autoprefixer')
 ]
 
@@ -15,7 +16,7 @@ module.exports = {
         path: path.resolve(__dirname, 'app')
     },
     devServer: {
-        before: function(app, server) {
+        before: function (app, server) {
             server._watch('./app/**/*.html')
         },
         contentBase: path.join(__dirname, 'app'),
@@ -31,9 +32,9 @@ module.exports = {
                     'style-loader',
                     'css-loader?url=false',
                     {
-                        loader: 'postcss-loader', 
+                        loader: 'postcss-loader',
                         options: {
-                            postcssOptions: {plugins: postCSSPlugins}
+                            postcssOptions: { plugins: postCSSPlugins }
                         }
                     }
                 ]

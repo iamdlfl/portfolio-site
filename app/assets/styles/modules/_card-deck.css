@@ -1,0 +1,60 @@
+.card-deck {
+    margin: 10px auto 50px auto;
+
+    @media (min-width: $large) {
+        display: flex;
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+
+    .card {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border: 1px $lightGrey solid;
+        max-width: 100%;
+        width: 25rem;
+        border-radius: 0 0 5px 5px;
+
+        @media (min-width: $small) {
+            width: 30rem;
+        }
+
+        @media (min-width: $large) {
+            width: 25rem; 
+        }
+
+        &__img-top {
+            
+        }
+
+        &__body {
+            margin: 15px;
+        }
+
+        &__title {
+            font-size: 1.25rem;
+
+            @media (min-width: $small) {
+                font-size: 1.5rem;
+            }
+
+            @media (min-width: $large) {
+                font-size: 1.7rem;
+            }
+        }
+
+        &__text {
+            font-size: 1.05rem;
+
+            @media (min-width: $small) {
+                font-size: 1.15rem;
+            }
+        }
+    }
+}

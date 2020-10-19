@@ -1,30 +1,130 @@
 .hero {
   position: relative;
-  margin-bottom: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+
+  h1 {
+    padding: 5px;
+    margin: 5px;
+  }
   
   &__content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    top: 0;
+    transform: translateY(0);
     left: 0;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba($lightGrey, 0.5);
+    font-weight: 500;
+    text-shadow: 1px 1px 3px grey;
   }
 
-  @media (max-width: $medium) {
+  &__background {
+    display: none;
+  }
+
+  &__header {
+    font-size: 2rem;
+  }
+
+  &__tagline{
+    text-align: center;
+  }
+
+  &__extended-intro {
+    text-align: left;
+  }
+
+
+  @media (min-width: $small) {
+    
+    &__header {
+      font-size: 2.6rem;
+    }
+
+    &__tagline {
+      font-size: 1.4rem;
+    }
 
     &__content {
-      position: relative;
-      top: 0;
-      transform: translateY(0);
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (min-width: $med-large) {
+
+    &__content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+    }
+
+    &__image {
+      transform: scale(0.6);
     }
 
     &__background {
-      display: none;
+      display: block;
+    }
+
+    &__header {
+      font-size: 3.1rem;
+      text-align: left;
+    }
+
+    &__tagline {
+      font-size: 1.6rem;
+      text-align: left;
+    }
+
+    &__text-content {
+      transform: translateY(-35%);
+    }
+
+    &__extended-intro {
+      transform: translateY(-15%);
+    }
+
+  }
+
+  @media (min-width: 950px) {
+    &__extended-intro {
+      transform: translateY(0);
+    }
+
+  }
+
+  @media (min-width: $large) {
+    &__content {
+      font-size: 1.3rem;
+    }
+
+    &__header {
+      font-size: 3.6rem;
+    }
+
+    &__tagline {
+      font-size: 1.9rem;
+    }
+
+    &__image {
+      transform: scale(1);
+    }
+
+    &__text-content {
+      transform: translateY(0);
+    }
+
+  }
+
+  @media (min-width: $huge) {
+    &__background {
+      display: block;
     }
   }
 

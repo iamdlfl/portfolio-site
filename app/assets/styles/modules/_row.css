@@ -1,5 +1,4 @@
 .row {
-
     
     &::after {
         content: "";
@@ -7,31 +6,77 @@
         display: table;
     }
 
+    &--padded {
+        margin-right: -65px;
+    }
+
+    &--padded > div {
+        padding-right: 65px;
+    }
+
+
+    @media (min-width: $small) {
+        &__small-12 {
+            float: left;
+            width: 100%;
+        }
+
+        &__small-4 {
+            float: left;
+            width: 33.333%;
+        }
+    }
+
     
     @media (min-width: $medium) {
-
+        
         &__medium-3 {
             float: left;
             width: 25%;
         }
-    
+        
         &__medium-9 {
             float: left;
             width: 75%;
         }
-
+        
         &__medium-4 {
             float: left;
-            width: 33.333%;
+            width: 33.33%;
         }
-
+        
         &__medium-8 {
             float: left;
-            width: 66.666%;
+            width: 66.66%;
+        }
+        
+        &__medium-6 {
+            float: left;
+            width: 50%;
+        }
+        
+        &--ml {
+            margin-left: 20px;
+            
+        }
+    }
+
+
+
+    @media (min-width: $large) {
+
+        &__large-3 {
+            float: left;
+            width: 25%;
+        }
+
+        &__large-8 {
+            float: left;
+            width: 66.66%;
         }
 
     }
-
+    
 
 
 }

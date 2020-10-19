@@ -1,0 +1,15 @@
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    min-height: 30px;
+    border-radius: 3px;
+    color: white;
+    background-color: $linkText;
+    text-align: center;
+    vertical-align: middle;
+
+    &-lg {
+        min-width: 210px;
+        min-height: 50px;
+    }
+}
