@@ -17,29 +17,29 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="myNavbar">
-    <a href="index.html" class="navbar-brand">
-      <h3>DL</h3>
+  <nav class="navbar" id="myNavbar">
+    <a href="index.html" class="navbar__brand navbar__brand--black">
+      DL
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
+    <div class="navbar__toggler" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <div class="navbar__toggler__middle"></div>
+    </div>
+    <div class="collapse navbar__collapse">
+      <ul class="nav navbar__nav">
+        <li class="nav__item">
           <a href="index.html" class="nav-link">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav__item">
           <a href="projects.html" class="nav-link">Projects</a>
         </li>
-        <li class="nav-item">
+        <li class="nav__item">
           <a href="about_me.html" class="nav-link">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav__item">
           <a href="education.html" class="nav-link">Education</a>
         </li>
-        <li class="nav-item">
+        <li class="nav__item">
           <a href="contact.php" class="nav-link">Contact</a>
         </li>
       </ul>
@@ -113,10 +113,11 @@
             <li class="list__item list__item--header list__item--med-min-height">Beginner
               Technologies/<wbr>Languages</li>
             <li class="list__item">MySQL</li>
+            <li class="list__item">C#</li>
             <li class="list__item">PHP</li>
             <li class="list__item">Node.js</li>
             <li class="list__item">Webpack</li>
-            <li class="list__item">Unity and C#</li>
+            <li class="list__item">Unity</li>
             <li class="list__item">Wordpress</li>
             <li class="list__item">MVC design pattern</li>
           </ul>
@@ -137,7 +138,7 @@
   <!-- Cards with a bit more info and links to other pages -->
   <div class="container" id="cards">
     <div class="card-deck">
-      <div class="card">
+      <div class="card card--tan">
         <img class="card__img-top" src="assets/index_pics/OnTheWharf.jpg" alt="Card image cap">
         <div class="card__body">
           <h5 class="card__title center"><i class="fas fa-male"></i> Sample Projects</h5>
@@ -151,7 +152,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card card--tan">
         <img class="card__img-top" src="assets/index_pics/HawthorneTrail.jpg" alt="Card image cap">
         <div class="card__body">
           <h5 class="card__title center"><i class="fas fa-bicycle"></i> About Me</h5>
@@ -164,7 +165,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card card--tan">
         <img class="card__img-top" src="assets/index_pics/TheBellTower.jpg" alt="Card image cap">
         <div class="card__body">
           <h5 class="card__title center"><i class="fas fa-route"></i> Education</h5>

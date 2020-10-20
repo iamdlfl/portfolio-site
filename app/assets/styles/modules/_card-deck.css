@@ -21,6 +21,10 @@
         width: 25rem;
         border-radius: 0 0 5px 5px;
 
+        &--tan {
+            background-color: rgba($tan, 0.1);
+        }
+
         @media (min-width: $small) {
             width: 30rem;
         }

@@ -1,0 +1,28 @@
+.nav {
+    display: inline-block;
+    list-style: none;
+
+    &__item {
+
+        a {
+            color: white;
+        }
+        
+        display: inline-block;
+        padding-left: 10px;
+        position: absolute;
+
+        &--expanded {
+            position: relative;
+            display: block;
+            padding-top: 10px;
+            text-align: center;
+
+        }
+        
+        @media (min-width: $med-large) {
+            position: relative;
+            margin-top: 5px;
+        }
+    }
+}
