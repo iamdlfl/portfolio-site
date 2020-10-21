@@ -63,24 +63,24 @@
 
   <div class="container container--smaller" id="codeblock">
     <div class="btn-group" role="group" aria-label="Button group for code">
-      <button class="btn collapser" id="movie" type="button" data-toggle="collapse" data-target="#moviecode"
+      <button class="btn collapser" id="movie" type="button" data-conflicts="#opencvcode" data-target="#moviecode"
         aria-expanded="false" aria-controls="moviecode">
         <p>Movie Suggester</p>
       </button>
-      <button class="btn collapser" id="opencv" type="button" data-toggle="collapse" data-target="#opencvcode"
-        aria-expanded="false" aria-controls="opencvcode">
+      <button class="btn collapser" id="opencv" type="button" data-conflicts="#guicode #restcode #moviecode"
+        data-target="#opencvcode" aria-expanded="false" aria-controls="opencvcode">
         <p>OpenCV and OCR</p>
       </button>
     </div>
     <br>
     <div class="collapsee btn-group" role="group" aria-label="Button group for Movie Suggester code files"
       id="moviecode">
-      <button class="btn btn--purple" id="gui" type="button" data-toggle="collapse" data-target="#guicode"
+      <button class="collapser btn btn--purple" id="gui" type="button" data-conflicts="#restcode" data-target="#guicode"
         aria-expanded="false" aria-controls="guicode">
         The Main Program
       </button>
-      <button class="btn btn--purple" id="rest" type="button" data-toggle="collapse" data-target="#restcode"
-        aria-expanded="false" aria-controls="restcode">
+      <button class="collapser btn btn--purple" id="rest" type="button" data-conflicts="#guicode"
+        data-target="#restcode" aria-expanded="false" aria-controls="restcode">
         REST API Functions
       </button>
     </div>
@@ -92,12 +92,12 @@
       </div>
       <div class="collapsee" id="restcode">
         <div class="code-block__section" data-link="movie_functions">
-          <pre id="restbody">Error: File not found.</pre>
+          <pre>Error: File not found.</pre>
         </div>
       </div>
       <div class="collapsee collapsee--show" id="opencvcode">
         <div class="code-block__section" data-link="opencvproject">
-          <pre id="opencvbody">Error: File not found.</pre>
+          <pre>Error: File not found.</pre>
         </div>
       </div>
     </div>
