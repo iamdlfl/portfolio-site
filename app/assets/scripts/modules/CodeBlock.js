@@ -1,3 +1,14 @@
+/* 
+To use: 
+
+1. Create a div with class of code-block
+2. Create sub-divs with code-block__section for any sections of code
+3. Create a <pre> tag to house the code
+4. Set data-link to the name of the file minus the extension (currently must be a .txt)
+5. See below to change any file locations - may separate this out as another data value in future
+
+*/
+
 class CodeBlock {
     constructor() {
         this.sections = document.querySelectorAll('.code-block__section');
