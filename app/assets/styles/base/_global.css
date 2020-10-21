@@ -19,8 +19,40 @@ a {
     justify-content: center;
 }
 
-.center-image {
+.center--image {
     width: 100vw;
     margin-left: auto;
     margin-right: auto;
+}
+
+.align-right {
+    text-align: right;
+
+    &--large {
+        text-align: left;
+
+        @media (min-width: $large) {
+            text-align: right;
+        }
+    }
+}
+
+.mt-big {
+    margin-top: 80px;
+
+    &--large {
+        margin-top: 0;
+
+        @media (min-width: $large) {
+            margin-top: 80px;
+        }
+    }
+}
+
+.box-shadow {
+    box-shadow: 4px 4px 6px $lightGrey;
+}
+
+.sr-only {
+    visibility: hidden;
 }

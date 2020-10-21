@@ -1,0 +1,104 @@
+.slide-show {
+    margin: 20px 0;
+
+    &--mt {
+
+        margin-top: 30px;
+
+        @media (min-width: $med-large) {
+            margin-top: 80px;
+        }
+    }
+
+    &__inner {
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+    &__item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+
+        &__caption {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            bottom: 0;
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 2px $mainText;
+            
+            &__header {
+                font-size: 1.3rem;
+            }
+
+        }
+    }
+
+    &__control {
+        position: absolute;
+        height: 99%;
+        width: 30%;
+        transition: all 0.3s ease-in-out;
+
+
+
+        &--prev {
+            left: 0;
+            top: 0;
+
+            &:hover {
+                background: linear-gradient(to right, rgba($lightGrey, 0.4), transparent)
+            }
+
+            &__icon {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                top: 50%;
+                left: 10%;
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 500;
+                transform: scaleY(2);
+
+                &:hover {
+                    cursor: default;
+                }
+            }
+        }
+
+        &--next {
+            right: 0;
+            top: 0;
+
+            &:hover {
+                background: linear-gradient(to left, rgba($lightGrey, 0.4), transparent)
+            }
+
+            &__icon {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                top: 50%;
+                right: 10%;
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 500;
+                transform: scaleY(2);
+
+                &:hover {
+                    cursor: default;
+                }
+            }
+
+        }
+    }
+}

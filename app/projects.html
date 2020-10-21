@@ -1,0 +1,183 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>David Lynch</title>
+
+
+
+</head>
+
+<body>
+  <nav class="navbar" id="myNavbar">
+    <a href="index.html" class="navbar__brand navbar__brand--black">
+      DL
+    </a>
+    <div class="navbar__toggler" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <div class="navbar__toggler__middle"></div>
+    </div>
+    <div class="collapse navbar__collapse">
+      <ul class="nav navbar__nav">
+        <li class="nav__item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="projects.html">Projects</a>
+        </li>
+        <li class="nav__item">
+          <a href="about_me.html">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="education.html">Education</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.php">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container container--smaller text-section">
+    <div class="text-section__body mt-big--large">
+
+      <h5>I started seriously learning programming, starting with Python, when the COVID-19 quarantine started.</h5>
+      <h6>After learning Python for several months and getting comfortable with it, I started to branch out
+        to some other languages and tools for web development. At this time I also started to learn some C#,
+        which I have started to put to use with Unity, developing games.</h6>
+      <h6>Find the older version of this site <a href="assets/OldSite/index.html">here</a>. Here are some simple
+        projects using
+        PHP and various APIs:
+        <a href="assets/OldSite/weather.php">Weather Lookup</a> and <a href="assets/OldSite/lookup.php">Postal Code
+          Lookup</a>.</h6>
+      <h4 class="text-center">Please see my example code below.</h4>
+    </div>
+  </div>
+
+  <div class="container" id="codeblock">
+    <div class="btn-group" role="group" aria-label="Button group for code">
+      <button class="btn btn-dark" id="movie" type="button" data-toggle="collapse" data-target="#moviecode"
+        aria-expanded="false" aria-controls="moviecode">
+        Movie Suggester
+      </button>
+      <button class="btn btn-info" id="opencv" type="button" data-toggle="collapse" data-target="#opencvcode"
+        aria-expanded="false" aria-controls="opencvcode">
+        OpenCV and OCR
+      </button>
+    </div>
+    <br>
+    <div class="collapse btn-group" role="group" aria-label="Button group for Movie Suggester code files"
+      id="moviecode">
+      <button class="btn btn-secondary" id="gui" type="button" data-toggle="collapse" data-target="#guicode"
+        aria-expanded="false" aria-controls="guicode">
+        The Main Program
+      </button>
+      <button class="btn btn-secondary" id="rest" type="button" data-toggle="collapse" data-target="#restcode"
+        aria-expanded="false" aria-controls="restcode">
+        REST API Functions
+      </button>
+    </div>
+    <div class="collapse" id="guicode">
+      <div class="card card-body">
+        <pre id="guibody">Error: File not found.</pre>
+      </div>
+    </div>
+    <div class="collapse" id="restcode">
+      <div class="card card-body">
+        <pre id="restbody">Error: File not found.</pre>
+      </div>
+    </div>
+    <div class="collapse show active" id="opencvcode">
+      <div class="card card-body">
+        <pre id="opencvbody">Error: File not found.</pre>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- Loading code examples -->
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      $(document).ready(function () {
+        $.ajax("assets/proj_files/opencvproject.txt").done(function (data) {
+          $("#opencvbody").text(data);
+        }).fail(function () {
+          alert("Could not get data");
+        });
+      });
+    });
+    $(function () {
+      $(document).ready(function () {
+        $.ajax("assets/proj_files/movie_functions.txt").done(function (data) {
+          $("#restbody").text(data);
+        }).fail(function () {
+          alert("Could not get data");
+        });
+      });
+    });
+    $(function () {
+      $(document).ready(function () {
+        $.ajax("assets/proj_files/logon.txt").done(function (data) {
+          $("#guibody").text(data);
+        }).fail(function () {
+          alert("Could not get data");
+        });
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+
+    /* To ensure only one chunk of code is showing */
+    $("#movie").click(function () {
+      if ($("#opencvcode").hasClass("show")) {
+        $("#opencvcode").collapse('toggle');
+      }
+    });
+    $("#opencv").click(function () {
+      if ($("#moviecode").hasClass("show")) {
+        $("#moviecode").collapse('toggle');
+      }
+      if ($("#restcode").hasClass("show")) {
+        $("#restcode").collapse('toggle');
+      }
+      if ($("#guicode").hasClass("show")) {
+        $("#guicode").collapse('toggle');
+      }
+    });
+    $("#gui").click(function () {
+      if ($("#restcode").hasClass("show")) {
+        $("#restcode").collapse('toggle');
+      }
+    });
+    $("#rest").click(function () {
+      if ($("#guicode").hasClass("show")) {
+        $("#guicode").collapse('toggle');
+      }
+    });
+
+
+  </script>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>

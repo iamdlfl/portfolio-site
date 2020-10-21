@@ -1,0 +1,21 @@
+.text-section {
+    
+    margin-bottom: 40px;
+    
+    &__header {
+        font-size: 1.5rem;
+    }
+    
+    &__body {
+        font-size: 1.4rem;
+    }
+    
+    &--bg-tan-faded {
+        
+        @media (min-width: $med-large) {
+            background: radial-gradient(closest-side, rgba($tan, 0.4), #ffffff);
+            
+        }
+        
+    }
+}

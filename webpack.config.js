@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fse = require('fs-extra');
 
 const postCSSPlugins = [
     require('postcss-import'),
@@ -7,6 +9,15 @@ const postCSSPlugins = [
     require('postcss-hexrgba'),
     require('autoprefixer')
 ]
+
+let pages = fse.readdirSync('./app').filter(function (file) {
+    return file.endsWith('.html');
+}).map(function (page) {
+    return new HtmlWebpackPlugin({
+        filename: page,
+        template: `./app/${page}`
+    })
+});
 
 module.exports = {
     mode: 'development',
