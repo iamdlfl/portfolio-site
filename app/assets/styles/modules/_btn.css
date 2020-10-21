@@ -12,4 +12,12 @@
         min-width: 210px;
         min-height: 50px;
     }
+
+    &--tan {
+        background-color: $tan;
+    }
+
+    &--purple {
+        background-color: $deepPurple;
+    }
 }

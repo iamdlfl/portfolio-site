@@ -40,6 +40,14 @@ a {
 .mt-big {
     margin-top: 80px;
 
+    &--med-large {
+        margin-top: 0;
+
+        @media (min-width: $med-large) {
+            margin-top: 80px;
+        }        
+    }
+
     &--large {
         margin-top: 0;
 

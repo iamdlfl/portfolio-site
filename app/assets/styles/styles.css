@@ -13,3 +13,5 @@
 @import 'modules/_nav';
 @import 'modules/_text-section';
 @import 'modules/_slide-show';
+@import 'modules/_code-block';
+@import 'modules/_collapser';

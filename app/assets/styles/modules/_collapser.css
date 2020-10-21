@@ -1,0 +1,11 @@
+.collapser {
+
+}
+
+.collapsee {
+    display: none;
+
+     &--show {
+         display: block;
+     }
+}

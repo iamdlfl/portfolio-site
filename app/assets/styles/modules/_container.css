@@ -9,4 +9,15 @@
     &--smaller {
         max-width: 900px;
     }
+
+    &--scroll {
+        overflow: auto;
+        max-height: 800px;
+    }
+
+    &--break {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
 }

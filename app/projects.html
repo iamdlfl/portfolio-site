@@ -46,7 +46,7 @@
   </nav>
 
   <div class="container container--smaller text-section">
-    <div class="text-section__body mt-big--large">
+    <div class="text-section__body mt-big--med-large">
 
       <h5>I started seriously learning programming, starting with Python, when the COVID-19 quarantine started.</h5>
       <h6>After learning Python for several months and getting comfortable with it, I started to branch out
@@ -61,42 +61,44 @@
     </div>
   </div>
 
-  <div class="container" id="codeblock">
+  <div class="container container--smaller" id="codeblock">
     <div class="btn-group" role="group" aria-label="Button group for code">
-      <button class="btn btn-dark" id="movie" type="button" data-toggle="collapse" data-target="#moviecode"
+      <button class="btn collapser" id="movie" type="button" data-toggle="collapse" data-target="#moviecode"
         aria-expanded="false" aria-controls="moviecode">
-        Movie Suggester
+        <p>Movie Suggester</p>
       </button>
-      <button class="btn btn-info" id="opencv" type="button" data-toggle="collapse" data-target="#opencvcode"
+      <button class="btn collapser" id="opencv" type="button" data-toggle="collapse" data-target="#opencvcode"
         aria-expanded="false" aria-controls="opencvcode">
-        OpenCV and OCR
+        <p>OpenCV and OCR</p>
       </button>
     </div>
     <br>
-    <div class="collapse btn-group" role="group" aria-label="Button group for Movie Suggester code files"
+    <div class="collapsee btn-group" role="group" aria-label="Button group for Movie Suggester code files"
       id="moviecode">
-      <button class="btn btn-secondary" id="gui" type="button" data-toggle="collapse" data-target="#guicode"
+      <button class="btn btn--purple" id="gui" type="button" data-toggle="collapse" data-target="#guicode"
         aria-expanded="false" aria-controls="guicode">
         The Main Program
       </button>
-      <button class="btn btn-secondary" id="rest" type="button" data-toggle="collapse" data-target="#restcode"
+      <button class="btn btn--purple" id="rest" type="button" data-toggle="collapse" data-target="#restcode"
         aria-expanded="false" aria-controls="restcode">
         REST API Functions
       </button>
     </div>
-    <div class="collapse" id="guicode">
-      <div class="card card-body">
-        <pre id="guibody">Error: File not found.</pre>
+    <div class="code-block">
+      <div class="collapsee" id="guicode">
+        <div class="code-block__section" data-link="logon">
+          <pre>Error: File not found.</pre>
+        </div>
       </div>
-    </div>
-    <div class="collapse" id="restcode">
-      <div class="card card-body">
-        <pre id="restbody">Error: File not found.</pre>
+      <div class="collapsee" id="restcode">
+        <div class="code-block__section" data-link="movie_functions">
+          <pre id="restbody">Error: File not found.</pre>
+        </div>
       </div>
-    </div>
-    <div class="collapse show active" id="opencvcode">
-      <div class="card card-body">
-        <pre id="opencvbody">Error: File not found.</pre>
+      <div class="collapsee collapsee--show" id="opencvcode">
+        <div class="code-block__section" data-link="opencvproject">
+          <pre id="opencvbody">Error: File not found.</pre>
+        </div>
       </div>
     </div>
   </div>
@@ -106,75 +108,7 @@
   </div>
 
 
-  <!-- Optional JavaScript -->
-  <!-- Loading code examples -->
-
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-      $(document).ready(function () {
-        $.ajax("assets/proj_files/opencvproject.txt").done(function (data) {
-          $("#opencvbody").text(data);
-        }).fail(function () {
-          alert("Could not get data");
-        });
-      });
-    });
-    $(function () {
-      $(document).ready(function () {
-        $.ajax("assets/proj_files/movie_functions.txt").done(function (data) {
-          $("#restbody").text(data);
-        }).fail(function () {
-          alert("Could not get data");
-        });
-      });
-    });
-    $(function () {
-      $(document).ready(function () {
-        $.ajax("assets/proj_files/logon.txt").done(function (data) {
-          $("#guibody").text(data);
-        }).fail(function () {
-          alert("Could not get data");
-        });
-      });
-    });
-  </script>
-
-  <script type="text/javascript">
-
-    /* To ensure only one chunk of code is showing */
-    $("#movie").click(function () {
-      if ($("#opencvcode").hasClass("show")) {
-        $("#opencvcode").collapse('toggle');
-      }
-    });
-    $("#opencv").click(function () {
-      if ($("#moviecode").hasClass("show")) {
-        $("#moviecode").collapse('toggle');
-      }
-      if ($("#restcode").hasClass("show")) {
-        $("#restcode").collapse('toggle');
-      }
-      if ($("#guicode").hasClass("show")) {
-        $("#guicode").collapse('toggle');
-      }
-    });
-    $("#gui").click(function () {
-      if ($("#restcode").hasClass("show")) {
-        $("#restcode").collapse('toggle');
-      }
-    });
-    $("#rest").click(function () {
-      if ($("#guicode").hasClass("show")) {
-        $("#guicode").collapse('toggle');
-      }
-    });
-
-
-  </script>
 
   <script src="main.js"></script>
 

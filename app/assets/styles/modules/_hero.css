@@ -65,6 +65,7 @@
     }
 
     &__image {
+      margin-top: 60px;
       transform: scale(0.6);
     }
 
@@ -113,6 +114,7 @@
     }
 
     &__image {
+      margin-top: 0;
       transform: scale(1);
     }
 
