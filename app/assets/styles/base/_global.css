@@ -61,6 +61,10 @@ a {
     box-shadow: 4px 4px 6px $lightGrey;
 }
 
+.text-shadow {
+    text-shadow: 1px 1px 1px black;
+}
+
 .sr-only {
     visibility: hidden;
 }

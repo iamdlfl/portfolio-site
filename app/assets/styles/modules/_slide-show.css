@@ -20,6 +20,18 @@
 
     &__item {
         display: none;
+        transform-origin: 0 0;
+        transform: scaleX(1);
+        transition: transform 0.2s ease-in-out;
+
+        &--showing-forward {
+            display: block;
+            transform: scaleX(0)
+        }
+
+        &--leaving-forward {
+
+        }
 
         &--active {
             display: block;

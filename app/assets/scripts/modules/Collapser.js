@@ -31,8 +31,11 @@ class Collapser {
         conflicts.forEach(function (con) {
             document.querySelector(con).classList.remove('collapsee--show');
         })
-        document.querySelector(target).classList.toggle('collapsee--show');
-
+        document.querySelector(target).classList.add('collapsee--showing');
+        window.setTimeout(function () {
+            document.querySelector(target).classList.remove('collapsee--showing');
+            document.querySelector(target).classList.add('collapsee--show');
+        }, 200);
     }
 
 }

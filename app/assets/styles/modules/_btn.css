@@ -20,4 +20,8 @@
     &--purple {
         background-color: $deepPurple;
     }
+
+    &--pad-vert {
+        padding: 10px 0;
+    }
 }
