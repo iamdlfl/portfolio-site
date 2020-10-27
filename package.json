@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack",
     "devserv": "webpack serve",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,10 +17,16 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "autoprefixer": "^10.0.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.0",
+    "cssnano": "^4.1.10",
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.2.1",
     "postcss-hexrgba": "^2.0.1",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^4.0.4",
