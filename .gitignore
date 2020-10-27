@@ -10,6 +10,14 @@
 *~
 *.sass-cache
 node_modules/
+app/assets/about_pics/
+app/assets/index_pics/
+app/assets/edu_files/
+app/assets/proj_files/
+dist/assets/about_pics/
+dist/assets/index_pics/
+dist/assets/edu_files/
+dist/assets/proj_files/
 docs/
 .tmp/
 
