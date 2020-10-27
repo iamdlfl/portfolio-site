@@ -1,0 +1,21 @@
+.alert {
+    color: black;
+    margin: 1em;
+    padding: 1em;
+    border-radius: .5em;
+    
+
+
+    &--danger {
+        background-color: rgba(255, 66, 66, 0.5);
+        color: black;
+
+        &:empty {
+            display: none;
+        }
+
+    }
+    &--success {
+        background-color: rgba(50, 200, 50, 0.5);
+    }
+}

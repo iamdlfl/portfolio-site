@@ -7,10 +7,20 @@
     background-color: $linkText;
     text-align: center;
     vertical-align: middle;
+    border: none;
+    
+    &:hover {
+        cursor: pointer;
+    }
 
-    &-lg {
+    &--lg {
         min-width: 210px;
         min-height: 50px;
+
+        &--square {
+            min-width: 100px;
+            min-height: 50px;
+        }
     }
 
     &--tan {

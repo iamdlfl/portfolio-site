@@ -1,0 +1,30 @@
+.form-group {
+    & label {
+        display: block;
+        margin: 1.5em 0 .5em 0;
+    }
+    & input {
+        display: block;
+        margin: 0 0 .5em 0;
+        width: 100%;
+        padding: 5px;
+    }
+
+    & textarea {
+        display: block;
+        margin: 0 0 .5em 0;
+        width: 100%;
+        height: 200px;
+        padding: 5px;
+    }
+}
+
+.form {
+    button[type="submit"] {
+        margin: 1em 0;
+    }
+
+    &--validation {
+        color: red;
+    }
+}

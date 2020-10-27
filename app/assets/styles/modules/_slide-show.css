@@ -30,7 +30,7 @@
         }
 
         &--leaving-forward {
-
+            display: block;
         }
 
         &--active {

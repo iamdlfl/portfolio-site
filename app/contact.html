@@ -44,44 +44,43 @@
             </ul>
         </div>
     </nav>
-    <div class="container text-section" id="contactme">
-        <h1 class="center">Contact Page</h1>
+    <div class="container container--smaller text-section" id="contactme">
+        <h1 class="center mt-big">Contact Page</h1>
         <p>Welcome to my contact page, feel free to contact me through email or via
             <a href="https://www.linkedin.com/in/david-lynch-8435a0141">LinkedIn</a>,
             <a href="https://github.com/iamdlfl">GitHub</a> or the contact form below.</p>
         <p>My e-mail address: <a href="mailto: davidjlynch1017@gmail.com">davidjlynch1017@gmail.com</a></p>
     </div>
 
-    <div class="container" id="contactform">
-        <h3>Get in touch!</h3>
-        <div class="container" id="messages">
+    <div class="container container--smaller" id="contactform">
+        <h2>Get in touch!</h2>
+        <div class="container form--validation" id="messages">
 
-            <div class="alert alert-danger" role="alert" id="errors">
-
+            <div class="alert alert--danger" role="alert" id="errors">
             </div>
-            <div class="alert alert-success" role="alert" id="success">
+            <div class="alert alert--success" role="alert" id="success">
                 Successful submission!
             </div>
         </div>
-        <form method="post" id="myform">
+        <form class="form" method="post" id="myform">
             <div class="form-group">
                 <label for="email">Your email address</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+                <input type="email" id="email" name="email" aria-describedby="emailHelp">
+                <small id="emailHelp" class="text--muted">I'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" class="form-control" id="subject" name="subject" aria-label="subject">
+                <input type="text" id="subject" name="subject" aria-label="subject">
             </div>
             <div class="form-group">
                 <label class="form-check-label" for="body">Body of the message here</label>
-                <textarea id="body" name="body" class="form-control" aria-label="Body"></textarea>
+                <textarea id="body" name="body" aria-label="Body"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <button type="submit" class="btn btn--lg--square" id="submit">Submit</button>
         </form>
     </div>
 
-    <footer class="footer"></footer>
+    <footer class="footer footer--fill-empty-space"></footer>
 
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -89,6 +88,9 @@
         src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
+
+        $("#success").hide();
+        $("#errors").hide();
 
         function isEmail(email) {
 
@@ -115,11 +117,11 @@
             }
 
             if (fieldsMissing != "") {
-                errorMessage += "<h6>The following field(s) are missing: </h6><p>" + fieldsMissing + "</p>";
+                errorMessage += "<p>The following field(s) are missing: </p><p>" + fieldsMissing + "</p>";
             }
 
             if (isEmail($("#email").val()) == false) {
-                errorMessage += "<p>Your email address is not valid</p>";
+                errorMessage += "<br><br><p>Your email address is not valid</p>";
             }
 
             if (errorMessage != "") {
@@ -135,6 +137,8 @@
         });
 
     </script>
+
+    <script src="main.js"></script>
 
 </body>
 
