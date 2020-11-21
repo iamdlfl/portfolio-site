@@ -57,6 +57,26 @@ a {
     }
 }
 
+.mb-big {
+    margin-bottom: 80px;
+
+    &--med-large {
+        margin-bottom: 0;
+
+        @media (min-width: $med-large) {
+            margin-bottom: 80px;
+        }        
+    }
+
+    &--large {
+        margin-bottom: 0;
+
+        @media (min-width: $large) {
+            margin-bottom: 80px;
+        }
+    }
+}
+
 .box-shadow {
     box-shadow: 4px 4px 6px $lightGrey;
 }

@@ -25,6 +25,14 @@
             background-color: rgba($tan, 0.1);
         }
 
+        &--mx {
+            margin: inherit;
+
+            @media (min-width: $large) {
+                margin: 0 1em;
+            }
+        }
+
         @media (min-width: $small) {
             width: 30rem;
         }
