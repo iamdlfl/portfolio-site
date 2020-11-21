@@ -15,6 +15,7 @@ app/assets/index_pics/
 app/assets/edu_files/
 app/assets/proj_files/
 app/assets/OldSite/
+dist/assets/OldSite/
 dist/assets/about_pics/
 dist/assets/index_pics/
 dist/assets/edu_files/
