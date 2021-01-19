@@ -22,22 +22,22 @@ if ($_POST) {
   }
 
   if ($error != "") {
-    $error = '<div class="alert alert-danger" role="alert">'.$error.'</div>';
+    $error = '<div class="alert alert--danger" role="alert">'.$error.'</div>';
   }
 
   //SET EMAIL INFO
   $emailTo = "davidjlynch1017@gmail.com";
   $subject = $_POST["subject"];
   $body = "From: ".$emailFrom."\n"."\nBody: ".$_POST["body"];
-  $headers = "From: contactpage@davidlynch-me.stackstaging.com";
+  $headers = "From: contactpage@davidlynch.me";
 
   if ($error == "") {
     //SEND EMAIL
     if (mail($emailTo, $subject, $body, $headers)) {
-      $success='<div class="alert alert-success" role="alert">Success!</div>';
+      $success='<div class="alert alert--success" role="alert">Success!</div>';
     }
     else {
-      $error = '<div class="alert alert-danger" role="alert">Something went wrong...</div>';
+      $error = '<div class="alert alert--danger" role="alert">Something went wrong...</div>';
     }
   }
 }
@@ -91,6 +91,9 @@ if ($_POST) {
     </nav>
     <div class="container container--smaller text-section" id="contactme">
         <h1 class="center mt-big">Contact Page</h1>
+        <div class="alert alert--danger">
+            <h2>The contact page is currently unusable pending a support ticket with my new hosting service. Please try again later.</h2>
+        </div>
         <p>Welcome to my contact page, feel free to contact me through email or via
             <a href="https://www.linkedin.com/in/david-lynch-8435a0141">LinkedIn</a>,
             <a href="https://github.com/iamdlfl">GitHub</a> or the contact form below.</p>
@@ -100,8 +103,8 @@ if ($_POST) {
     <div class="container container--smaller" id="contactform">
         <h2>Get in touch!</h2>
         <div class="container form--validation" id="messages">
-            <? echo $success; ?>
-            <? echo $error; ?>
+            <?php echo $success; ?>
+            <?php echo $error; ?>
             <div class="alert alert--danger" role="alert" id="errors">
             </div>
             <div class="alert alert--success" role="alert" id="success">
@@ -111,18 +114,18 @@ if ($_POST) {
         <form class="form" method="post" id="myform">
             <div class="form-group">
                 <label for="email">Your email address</label>
-                <input type="email" id="email" name="email" aria-describedby="emailHelp">
+                <input type="email" id="email" name="email" aria-describedby="emailHelp" disabled>
                 <small id="emailHelp" class="text--muted">I'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" aria-label="subject">
+                <input type="text" id="subject" name="subject" aria-label="subject" disabled>
             </div>
             <div class="form-group">
                 <label class="form-check-label" for="body">Body of the message here</label>
-                <textarea id="body" name="body" aria-label="Body"></textarea>
+                <textarea id="body" name="body" aria-label="Body" disabled></textarea>
             </div>
-            <button type="submit" class="btn btn--lg--square" id="submit">Submit</button>
+            <button type="submit" class="btn btn--lg--square" id="submit" disabled>Submit</button>
         </form>
     </div>
 
