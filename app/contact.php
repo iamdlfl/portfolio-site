@@ -29,7 +29,7 @@ if ($_POST) {
   $emailTo = "davidjlynch1017@gmail.com";
   $subject = $_POST["subject"];
   $body = "From: ".$emailFrom."\n"."\nBody: ".$_POST["body"];
-  $headers = "From: contactpage@davidlynch.me";
+  $headers = "From: contactpage@davidlynch.me"."\r\n"."Reply-To: ".$emailFrom;
 
   if ($error == "") {
     //SEND EMAIL
@@ -91,9 +91,6 @@ if ($_POST) {
     </nav>
     <div class="container container--smaller text-section" id="contactme">
         <h1 class="center mt-big">Contact Page</h1>
-        <div class="alert alert--danger">
-            <h2>The contact page is currently unusable pending a support ticket with my new hosting service. Please try again later.</h2>
-        </div>
         <p>Welcome to my contact page, feel free to contact me through email or via
             <a href="https://www.linkedin.com/in/david-lynch-8435a0141">LinkedIn</a>,
             <a href="https://github.com/iamdlfl">GitHub</a> or the contact form below.</p>
@@ -114,18 +111,18 @@ if ($_POST) {
         <form class="form" method="post" id="myform">
             <div class="form-group">
                 <label for="email">Your email address</label>
-                <input type="email" id="email" name="email" aria-describedby="emailHelp" disabled>
+                <input type="email" id="email" name="email" aria-describedby="emailHelp">
                 <small id="emailHelp" class="text--muted">I'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" aria-label="subject" disabled>
+                <input type="text" id="subject" name="subject" aria-label="subject">
             </div>
             <div class="form-group">
                 <label class="form-check-label" for="body">Body of the message here</label>
-                <textarea id="body" name="body" aria-label="Body" disabled></textarea>
+                <textarea id="body" name="body" aria-label="Body"></textarea>
             </div>
-            <button type="submit" class="btn btn--lg--square" id="submit" disabled>Submit</button>
+            <button type="submit" class="btn btn--lg--square" id="submit">Submit</button>
         </form>
     </div>
 
