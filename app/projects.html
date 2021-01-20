@@ -47,13 +47,9 @@
 
   <div class="container container--smaller text-section">
     <div class="text-section__body mt-big--med-large">
-
-      <h5>I started seriously learning programming, starting with Python, when the COVID-19 quarantine started.</h5>
-      <h6>After learning Python for several months and getting comfortable with it, I started to branch out
-        to some other languages and tools for web development. At this time I also started to learn some C#,
-        which I have started to put to use with Unity, developing games.</h6>
-      <h6>Find the older version of this site <a href="assets/OldSite/index.html">here</a>. Here are some simple
-        projects:
+      
+      <h4>Find the older version of this site <a href="assets/OldSite/index.html">here</a>. Find my github <a href="https://github.com/iamdlfl">here</a>. And here are some simple
+        projects I've worked on:</h4>
         <section id="cards">
           <div class="card-deck">
             <div class="card card--tan card--mx">
@@ -110,15 +106,23 @@
       </button>
     </div>
     <br>
-    <div class="collapsee btn-group" role="group" aria-label="Button group for Movie Suggester code files"
+    <div class="collapsee" aria-label="Button group for Movie Suggester code files"
       id="moviecode">
-      <button class="collapser btn btn--purple" id="gui" type="button" data-conflicts="#restcode" data-target="#guicode"
+      <div>
+        <h3>Movie suggester program:</h3>
+        <p>This program uses the OMDB and TasteDive APIs (found in the REST API Functions) to procure a list of related and highly rated movies.</p>
+        <p>The "main program" includes the GUI, account creation and database management. This is the interface users use to get their suggestions.</p>
+        <p>This project taught me some basics about working with a GUI, databases, and password hashing. This project is not ready to deploy but I chose to include it because it incorporates different aspects of development than some of the other projects.</p>
+      </div>
+      <div class="btn-group" role="group">
+        <button class="collapser btn btn--purple" id="gui" type="button" data-conflicts="#restcode" data-target="#guicode"
         aria-expanded="false" aria-controls="guicode">
         The Main Program
-      </button><button class="collapser btn btn--purple" id="rest" type="button" data-conflicts="#guicode"
+        </button><button class="collapser btn btn--purple" id="rest" type="button" data-conflicts="#guicode"
         data-target="#restcode" aria-expanded="false" aria-controls="restcode">
         REST API Functions
-      </button>
+        </button>
+      </div>
     </div>
     <div class="code-block">
       <div class="collapsee" id="guicode">
@@ -132,6 +136,12 @@
         </div>
       </div>
       <div class="collapsee collapsee--show" id="opencvcode">
+        <div>
+          <h3>Photo analysis project:</h3>
+          <p>This project was the capstone project for my Python 3 Specialization class on Coursera. I had to read the docs of the OpenCV and numpy library in order to successfully complete this project.</p>
+          <p>The goal of the project was to take an array of images (in this case newspaper pages) and search the text using OCR for a word or words. I then used OpenCV and some provided Haar Cascades to search for any faces.</p>
+          <p>Finally, a sheet was made if the word was found and any faces found on that page were made into thumbnails using PIL and also attached to the sheet.</p>
+        </div>
         <div class="code-block__section" data-link="opencvproject">
           <pre>Error: File not found.</pre>
         </div>

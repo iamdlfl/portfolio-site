@@ -1,11 +1,21 @@
-# SELF-MADE
 '''A simple program that allows users to create an account, log on and get movie recommendations through
 TasteDive and OMDB
 '''
-
-from tkinter import *
+from tkinter import (Tk,
+                     Frame,
+                     Label,
+                     Message,
+                     Entry,
+                     Button,
+                     Checkbutton,
+                     END,
+                     mainloop,
+                     Toplevel,
+                     IntVar,
+                     )
 import sqlite3
 import requests
+import bcrypt
 from packages.secret_keys import OMDB_KEY, TASTEDIVE_KEY
 from packages.movie_functions import (get_movies_from_tastedive,
                                        extract_movie_titles,
@@ -23,7 +33,7 @@ logged_on = None
 admin = None
 
 
-cur.execute("""CREATE TABLE IF NOT EXISTS Logins (id INTEGER, username TEXT NOT NULL UNIQUE, password TEXT NOT NULL,
+cur.execute("""CREATE TABLE IF NOT EXISTS Logins (id INTEGER, username TEXT NOT NULL UNIQUE, password TEXT NOT NULL, 
 admin INTEGER, movies TEXT, PRIMARY KEY("id" AUTOINCREMENT))""")
 
 root = Tk()
@@ -62,7 +72,10 @@ def confirm_registration(event=None):
         pw_not_equal = Label(top, text='Passwords were not the same')
         pw_not_equal.grid(row=6, column=0, columnspan=2)
         return
-    cur.execute('INSERT INTO Logins (username, password, admin) VALUES (?, ?, 0)', (name, passw))
+    # Salting and hashing the password to store
+    salt = bcrypt.gensalt(rounds=16)
+    hashed = bcrypt.hashpw(passw.encode(), salt)
+    cur.execute('INSERT INTO Logins (username, password, admin) VALUES (?, ?, 0)', (name, hashed))
     conn.commit()
     registration_success = Label(logon_screen, text='Registration success! Now log on.').pack()
     top.destroy()
@@ -108,7 +121,8 @@ def logon(event=None):
         username_entry.delete(0, END)
         password_entry.delete(0, END)
         return
-    if password == authentication:
+    # Checking the input password with the hashed password
+    if bcrypt.checkpw(password.encode(), authentication):
         logged_on = True
     else:
         error = Label(logon_screen, text='Wrong password!').pack()
@@ -130,7 +144,7 @@ def logon(event=None):
     row = cur.fetchone()
     movies = str(row[0])
     try:
-        mov_list = row[0].split(',')
+        mov_list = row[0].split('|')
     except AttributeError:
         mov_list = []
     existing_movies = Message(movie_screen, text=movies, width=250)
@@ -201,7 +215,7 @@ def get_recs():
     except:
         pass
     new_movies = movie_add_entry.get()
-    new_mov_list = new_movies.split(',')
+    new_mov_list = new_movies.split('|')
     for movie in new_mov_list:
         mov_list.append(movie)
     if history.get() == 1:
@@ -222,7 +236,7 @@ def get_recs():
     recommendation_label = Message(movie_screen, text=movie_string, width=300)
     recommendation_label.grid(row=8, column=0, columnspan=2)
     movie_add_entry.delete(0, END)
-    cur.execute('''UPDATE Logins SET movies=? WHERE username=?''', (','.join(mov_list), person))
+    cur.execute('''UPDATE Logins SET movies=? WHERE username=?''', ('|'.join(mov_list), person))
 
 
 # The logon labels and entry boxes
@@ -236,7 +250,7 @@ password_entry.pack()
 # The buttons to logon or register an account
 root.bind('<Return>', logon)
 logon_button = Button(logon_screen, text='Log on', command=logon).pack()
-register_button = Button(logon_screen, text='Register for an account', command=register).pack()
+register_button = Button(logon_screen, text='Register for an= account', command=register).pack()
 close_button = Button(logon_screen, text='Exit Program', command=root.destroy).pack()
 
 # Labels and entries for the movie screen
