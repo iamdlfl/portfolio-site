@@ -16,6 +16,7 @@ app/assets/edu_files/
 app/assets/proj_files/
 app/assets/OldSite/*.jpg
 app/assets/OldSite/keys.php
+app/assets/OldSite/weather.php
 dist/assets/OldSite/
 dist/assets/about_pics/
 dist/assets/index_pics/
