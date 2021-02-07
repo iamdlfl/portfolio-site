@@ -65,8 +65,8 @@
     }
 
     &__image {
-      margin-top: 60px;
-      transform: scale(0.6);
+      margin-top: 20px;
+      transform: scale(0.4);
     }
 
     &__background {

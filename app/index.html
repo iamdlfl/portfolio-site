@@ -48,12 +48,17 @@
   <!-- The main hero  -->
   <main class="hero">
     <div class="hero__background">
-      <img class="center-image" srcset="assets/index_pics/beach.jpg" alt="A picture of the beach">
+      <picture>
+        <source srcset="assets/index_pics/beach.jpg" media="(min-width: 2000px)">
+        <source srcset="assets/index_pics/beach-medium.jpg" media="(min-width: 1350px)">
+        <source srcset="assets/index_pics/beach-small.jpg" media="(min-width: 1150px)">
+        <img class="center--image" srcset="assets/index_pics/beach-tiny.jpg" alt="A picture of the beach">
+      </picture>
     </div>
     <div class="hero__content">
       <div class="row">
         <div class="row row__large-3">
-          <img class="hero__image" src="assets/about_pics/myself.jpg" alt="Formal Picture">
+          <img class="hero__image" src="assets/about_pics/myself.jpg" alt="Formal Picture of Myself">
         </div>
         <div class="hero__text-content">
 
