@@ -86,4 +86,4 @@ if ($_POST) {
                 $("#success").show();
                 return true;
             }
-        });</script><script src="main.js"></script><script src="main.a4c172ac364934eb68df.js"></script></body></html>
+        });</script><script src="main.js"></script><script src="main.js"></script><script src="main.a4c172ac364934eb68df.js"></script></body></html>
