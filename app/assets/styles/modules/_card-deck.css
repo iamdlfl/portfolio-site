@@ -21,6 +21,10 @@
         width: 25rem;
         border-radius: 0 0 5px 5px;
 
+        &--all-rounded {
+            border-radius: 5px;
+        }
+
         &--tan {
             background-color: rgba($tan, 0.1);
         }
