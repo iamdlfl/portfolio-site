@@ -186,6 +186,6 @@ if ($_POST) {
 
     <script src="main.js"></script>
 
-<script src="main.js"></script><script src="main.js"></script></body>
+<script src="main.js"></script><script src="main.js"></script><script src="main.js"></script><script src="main.js"></script></body>
 
 </html>
