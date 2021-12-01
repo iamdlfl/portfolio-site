@@ -1,94 +1,99 @@
-body, html {
-    font-family: 'Roboto', sans-serif;
-    color: $mainText;
-    box-sizing: border-box;
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  color: $mainText;
+  box-sizing: border-box;
 }
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-    color: $linkText;
-    text-decoration: none;
+  color: $linkText;
+  text-decoration: none;
 }
 
 .center {
-    text-align: center;
-    align-content: center;
-    justify-content: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .center--image {
-    width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .align-right {
-    text-align: right;
+  text-align: right;
 
-    &--large {
-        text-align: left;
+  &--large {
+    text-align: left;
 
-        @media (min-width: $large) {
-            text-align: right;
-        }
+    @media (min-width: $large) {
+      text-align: right;
     }
+  }
+}
+
+.mt-3 {
+  margin-top: 3em;
 }
 
 .mt-big {
-    margin-top: 80px;
+  margin-top: 80px;
 
-    &--med-large {
-        margin-top: 0;
+  &--med-large {
+    margin-top: 0;
 
-        @media (min-width: $med-large) {
-            margin-top: 80px;
-        }        
+    @media (min-width: $med-large) {
+      margin-top: 80px;
     }
+  }
 
-    &--large {
-        margin-top: 0;
+  &--large {
+    margin-top: 0;
 
-        @media (min-width: $large) {
-            margin-top: 80px;
-        }
+    @media (min-width: $large) {
+      margin-top: 80px;
     }
+  }
 }
 
 .mb-big {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 
-    &--med-large {
-        margin-bottom: 0;
+  &--med-large {
+    margin-bottom: 0;
 
-        @media (min-width: $med-large) {
-            margin-bottom: 80px;
-        }        
+    @media (min-width: $med-large) {
+      margin-bottom: 80px;
     }
+  }
 
-    &--large {
-        margin-bottom: 0;
+  &--large {
+    margin-bottom: 0;
 
-        @media (min-width: $large) {
-            margin-bottom: 80px;
-        }
+    @media (min-width: $large) {
+      margin-bottom: 80px;
     }
+  }
 }
 
 .box-shadow {
-    box-shadow: 4px 4px 6px $lightGrey;
+  box-shadow: 4px 4px 6px $lightGrey;
 }
 
 .text-shadow {
-    text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px black;
 }
 
 .sr-only {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .text--muted {
-    color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
